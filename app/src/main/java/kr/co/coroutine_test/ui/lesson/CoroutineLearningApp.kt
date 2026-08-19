@@ -55,6 +55,10 @@ enum class CoroutineLesson(
     STATE_FLOW(
         title = "8. StateFlow + ViewModel",
         description = "화면 상태를 ViewModel에 보관하고 Lifecycle에 맞춰 수집합니다."
+    ),
+    SHARED_FLOW(
+        title = "9. SharedFlow + UI Event",
+        description = "Snackbar처럼 한 번만 처리할 UI 이벤트를 전달합니다."
     )
 }
 
@@ -86,6 +90,7 @@ fun CoroutineLearningApp(
         CoroutineLesson.FAILURE -> FailureLessonScreen(modifier, openMenu)
         CoroutineLesson.FLOW -> FlowLessonScreen(modifier, openMenu)
         CoroutineLesson.STATE_FLOW -> StateFlowLessonScreen(modifier, openMenu)
+        CoroutineLesson.SHARED_FLOW -> SharedFlowLessonScreen(modifier, openMenu)
     }
 }
 

@@ -51,6 +51,10 @@ enum class CoroutineLesson(
     FLOW(
         title = "7. Flow",
         description = "시간에 따라 여러 값이 전달되는 흐름을 확인합니다."
+    ),
+    STATE_FLOW(
+        title = "8. StateFlow + ViewModel",
+        description = "화면 상태를 ViewModel에 보관하고 Lifecycle에 맞춰 수집합니다."
     )
 }
 
@@ -81,6 +85,7 @@ fun CoroutineLearningApp(
         CoroutineLesson.ERROR -> ErrorLessonScreen(modifier, openMenu)
         CoroutineLesson.FAILURE -> FailureLessonScreen(modifier, openMenu)
         CoroutineLesson.FLOW -> FlowLessonScreen(modifier, openMenu)
+        CoroutineLesson.STATE_FLOW -> StateFlowLessonScreen(modifier, openMenu)
     }
 }
 

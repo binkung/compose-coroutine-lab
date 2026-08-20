@@ -75,6 +75,10 @@ enum class CoroutineLesson(
     API_RETRY(
         title = "13. API 오류 처리 + retry / retryWhen",
         description = "실패한 요청을 자동으로 재시도하고 제한 시간 후 취소합니다."
+    ),
+    COROUTINE_TESTING(
+        title = "14. Coroutine · Flow 테스트",
+        description = "가상 시간으로 retry, delay, timeout을 빠르게 검증합니다."
     )
 }
 
@@ -111,6 +115,7 @@ fun CoroutineLearningApp(
         CoroutineLesson.COMBINE -> CombineLessonScreen(modifier, openMenu)
         CoroutineLesson.SHARING -> SharingLessonScreen(modifier, openMenu)
         CoroutineLesson.API_RETRY -> ApiRetryLessonScreen(modifier, openMenu)
+        CoroutineLesson.COROUTINE_TESTING -> CoroutineTestingLessonScreen(modifier, openMenu)
     }
 }
 

@@ -59,6 +59,10 @@ enum class CoroutineLesson(
     SHARED_FLOW(
         title = "9. SharedFlow + UI Event",
         description = "Snackbar처럼 한 번만 처리할 UI 이벤트를 전달합니다."
+    ),
+    FLOW_OPERATORS(
+        title = "10. Flow 연산자 + 검색 debounce",
+        description = "검색어 흐름을 변환하고 이전 검색을 자동으로 취소합니다."
     )
 }
 
@@ -91,6 +95,7 @@ fun CoroutineLearningApp(
         CoroutineLesson.FLOW -> FlowLessonScreen(modifier, openMenu)
         CoroutineLesson.STATE_FLOW -> StateFlowLessonScreen(modifier, openMenu)
         CoroutineLesson.SHARED_FLOW -> SharedFlowLessonScreen(modifier, openMenu)
+        CoroutineLesson.FLOW_OPERATORS -> FlowOperatorsLessonScreen(modifier, openMenu)
     }
 }
 

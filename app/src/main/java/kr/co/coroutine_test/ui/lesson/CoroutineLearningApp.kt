@@ -67,6 +67,10 @@ enum class CoroutineLesson(
     COMBINE(
         title = "11. combine + 여러 화면 상태",
         description = "여러 StateFlow를 하나의 UI 상태로 조합합니다."
+    ),
+    SHARING(
+        title = "12. Cold Flow vs stateIn / shareIn",
+        description = "여러 수집자가 하나의 생산자를 공유하는 방법을 비교합니다."
     )
 }
 
@@ -101,6 +105,7 @@ fun CoroutineLearningApp(
         CoroutineLesson.SHARED_FLOW -> SharedFlowLessonScreen(modifier, openMenu)
         CoroutineLesson.FLOW_OPERATORS -> FlowOperatorsLessonScreen(modifier, openMenu)
         CoroutineLesson.COMBINE -> CombineLessonScreen(modifier, openMenu)
+        CoroutineLesson.SHARING -> SharingLessonScreen(modifier, openMenu)
     }
 }
 

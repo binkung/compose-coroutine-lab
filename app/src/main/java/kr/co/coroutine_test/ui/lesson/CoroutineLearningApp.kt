@@ -71,6 +71,10 @@ enum class CoroutineLesson(
     SHARING(
         title = "12. Cold Flow vs stateIn / shareIn",
         description = "여러 수집자가 하나의 생산자를 공유하는 방법을 비교합니다."
+    ),
+    API_RETRY(
+        title = "13. API 오류 처리 + retry / retryWhen",
+        description = "실패한 요청을 자동으로 재시도하고 제한 시간 후 취소합니다."
     )
 }
 
@@ -106,6 +110,7 @@ fun CoroutineLearningApp(
         CoroutineLesson.FLOW_OPERATORS -> FlowOperatorsLessonScreen(modifier, openMenu)
         CoroutineLesson.COMBINE -> CombineLessonScreen(modifier, openMenu)
         CoroutineLesson.SHARING -> SharingLessonScreen(modifier, openMenu)
+        CoroutineLesson.API_RETRY -> ApiRetryLessonScreen(modifier, openMenu)
     }
 }
 

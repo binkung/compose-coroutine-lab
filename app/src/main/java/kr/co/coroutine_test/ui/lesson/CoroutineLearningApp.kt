@@ -79,6 +79,10 @@ enum class CoroutineLesson(
     COROUTINE_TESTING(
         title = "14. Coroutine · Flow 테스트",
         description = "가상 시간으로 retry, delay, timeout을 빠르게 검증합니다."
+    ),
+    REPOSITORY(
+        title = "15. Repository + API · DB Flow",
+        description = "API 결과를 캐시에 저장하고 DAO Flow로 화면을 갱신합니다."
     )
 }
 
@@ -116,6 +120,7 @@ fun CoroutineLearningApp(
         CoroutineLesson.SHARING -> SharingLessonScreen(modifier, openMenu)
         CoroutineLesson.API_RETRY -> ApiRetryLessonScreen(modifier, openMenu)
         CoroutineLesson.COROUTINE_TESTING -> CoroutineTestingLessonScreen(modifier, openMenu)
+        CoroutineLesson.REPOSITORY -> RepositoryLessonScreen(modifier, openMenu)
     }
 }
 
